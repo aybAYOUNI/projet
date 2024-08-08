@@ -1,4 +1,4 @@
-package com.octest.bdd;
+/*package com.octest.bdd;
 
 import com.octest.beans.Visiteur;
 
@@ -71,5 +71,5 @@ public class Noms {
             e.printStackTrace();
         }
     }
-}
+}*/
 

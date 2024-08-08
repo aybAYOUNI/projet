@@ -1,6 +1,6 @@
 package org.example.testferstprojectee;
 
-import com.octest.bdd.Noms;
+
 import com.octest.beans.Auteur;
 import com.octest.beans.Visiteur;
 import com.octest.dao.DaoFactory;
@@ -15,6 +15,10 @@ import java.sql.SQLException;
 @WebServlet(name = "FormServlet", value = "/FormServlet")
 public class FormServlet extends HttpServlet {
     private visiteurDao visiteurdao;
+    public void  init () throws ServletException{
+        DaoFactory daoFactory = DaoFactory.getInstance();
+        this.visiteurdao = daoFactory.getVisiteurDao();
+    }
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         this.getServletContext().getRequestDispatcher("/Forminscription.jsp").forward(request, response);

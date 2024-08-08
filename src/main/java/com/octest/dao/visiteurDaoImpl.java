@@ -16,7 +16,7 @@ public class visiteurDaoImpl implements visiteurDao{
     @Override
     public void ajouter(Visiteur visiteur) {
         Connection connexion = null;
-        PreparedStatement preparedStatement = null;
+        PreparedStatement preparedStatement;
         try {
             preparedStatement = connexion.prepareStatement("INSERT INTO visiteur(nom, prenom, age) VALUES (?,?,?)");
             preparedStatement.setString(1, visiteur.getNom());
